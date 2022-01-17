@@ -5,8 +5,8 @@ const inquirer = require('inquirer');
 const path = require('path');
 const fs = require('fs');
 
-const DIST_DIR = path.resolve(__dirname, 'dist');
-const distPath = path.join(DIST_DIR, 'team.html');
+const PUBLIC_DIR = path.resolve(__dirname, 'public');
+const publicPath = path.join(PUBLIC_DIR, 'team.html');
 
 const render = require('./src/pageTemplate');
 
@@ -172,10 +172,10 @@ function appMenu() {
   }
 
   function buildTeam() {
-    if (!fs.existsSync(DIST_DIR)) {
-      fs.mkdirSync(DIST_DIR);
+    if (!fs.existsSync(PUBLIC_DIR)) {
+      fs.mkdirSync(PUBLIC_DIR);
     }
-    fs.writeFileSync(distPath, render(teamMembers), 'utf-8');
+    fs.writeFileSync(publicPath, render(teamMembers), 'utf-8');
   }
 
   createManager();
