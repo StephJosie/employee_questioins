@@ -14,7 +14,7 @@ describe('Intern', () => {
             let expectedResult = 'Intern'
             let result = testIntern.getRole()
             expect(result).toEqual(expectedResult)
-        })
+        });
     });
 
 });

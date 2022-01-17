@@ -5,7 +5,7 @@ describe('Engineer', () => {
         it('Github username', () => {
             let testEngineer = new Engineer('testName', 'testID', 'testEmail', 'testGithub')
             let expectedResult = 'testGithub'
-            let result = testEngineer.getGitHub()
+            let result = testEngineer.getGithub()
             expect(result).toEqual(expectedResult)
         });
     });
